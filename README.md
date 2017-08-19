@@ -35,6 +35,11 @@ function getip(){
     docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$1"
 }
 ```
+After you get this in your .bash_aliases you can type ```getip mysql``` to get the IP of a container called mysql
+
+***NOTE***
+If you want to make these functions and aliases available to all users on the system, simply define these functions in a file that is executed for all users, such as /etc/profile
+
 
 
 
