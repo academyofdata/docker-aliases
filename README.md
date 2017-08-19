@@ -28,5 +28,13 @@ function docql(){
 
 Subsequently just type ```docql cassnode01``` to drop into a cqlsh prompt on container called 'cassnode01'
 
+One other frequent command that people use is typing 'docker inspect' to get a container's IP address. Here's a function that does exactly that
+
+```
+function getip(){
+    docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$1"
+}
+```
+
 
 
