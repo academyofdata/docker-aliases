@@ -16,5 +16,7 @@ function dolog(){
 }
 ```
 
+With these three aliases you can type ```dps``` instead of ```docker ps -a```. Or type ```dosh node01``` to log into a container called 'node01'. Or ```dolog nginx``` to get a tail on the logs of a container called 'nginx'.
+
 
 
