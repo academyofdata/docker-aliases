@@ -18,5 +18,15 @@ function dolog(){
 
 With these three aliases you can type ```dps``` instead of ```docker ps -a```. Or type ```dosh node01``` to log into a container called 'node01'. Or ```dolog nginx``` to get a tail on the logs of a container called 'nginx'.
 
+And of course you can adjust or add new functions according to your needs. For instance if you work a lot with containers running Apache Cassandra you will typically log into the container and start cqlsh. This means that you could define a function to do directly that
+
+```
+function docql(){
+    docker exec -ti "$1" cqlsh
+}
+```
+
+Subsequently just type ```docql cassnode01``` to drop into a cqlsh prompt on container called 'cassnode01'
+
 
 
